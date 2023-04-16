@@ -16,19 +16,6 @@ variable "subnet_names" {
   default = ["Web_subnet", "web_subnet2"]
 }
 
-
-
-
-#create a internet gateway
-resource "aws_internet_gateway" "gw" {
-  vpc_id = aws_vpc.myvpc1.id
-
-  tags = {
-    Name = var.internet_gateway_name
-  }
-}
-
-
 # create a route table for the public subnets
 variable "vpc_id" {
   type = string
