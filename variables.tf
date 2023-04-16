@@ -1,20 +1,3 @@
-#create the provider
-terraform {
-  variable "aws_provider_version" {
-  description = "The version of the AWS provider to use"
-  default     = "~> 4.0"
-}
-
-# Configure the AWS Provider
-provider "aws" {
-  region = var.aws_region
-}
-
-variable "aws_region" {
-  type    = string
-  default = "us-east-1"
-}
-
 #create a VPC
 variable "vpc_cidr_block" {
   type = string
