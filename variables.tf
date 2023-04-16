@@ -24,7 +24,6 @@ variable "vpc_id" {
 variable "igw_name" {
   type = string
 }
-}
 
 #create route table to associate public subnet 1 and subnet 2
 variable "web_subnet1_id" {
